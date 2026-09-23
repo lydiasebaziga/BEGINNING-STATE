@@ -5,53 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEGINNING STATE</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-<body>
 
-    <h1>Mood Matcher</h1>
+    <body>
 
-    <form class="form" role="form">
+        <h1>Mood Matcher</h1>
 
-        <div>
-            <label for="mood">Select your mood:</label>
+        <form class="form" role="form">
 
-            <select id="mood" name="mood" required>
-            <option value="">--Choose--</option>
-            <option value="happy">Happy</option>
-            <option value="sad">Sad</option>
-            <option value="calm">Calm</option>
-            </select>
-        </div>
+            <div>
+                <label for="mood">Select your mood:</label>
 
-        <div>
-            <label for="feel">Why do you feel this way?</label>
+                <select id="mood" name="mood" required>
+                    <option value="">--Choose--</option>
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="calm">Calm</option>
+                </select>
+            </div>
 
-            <input type="text" name="feel" id="feel">
-        </div>
+            <div>
+                <label for="feel">Why do you feel this way?</label>
 
-        <button type="submit">Submit</button>
+                <input type="text" name="feel" id="feel">
+            </div>
 
-    </form>
+            <button type="submit">Submit</button>
 
-
-    <!-- Result -->
-    <section class="result">
-
-        <h2 class="result-message"></h2>
-
-        <p class="result-note"></p>
-
-        <img class="result-image">
-
-    </section>
+        </form>
 
 
-    <script src="/js/form.js"></script>
+        <!-- Result -->
+        <section class="result">
 
-</body>
+            <h2 class="result-message"></h2>
+
+            <p class="result-note"></p>
+
+            <img class="result-image">
+
+        </section>
+
+
+        <script src="./js/form.js"></script>
+
+    </body>
 </body>
 
 </html>
