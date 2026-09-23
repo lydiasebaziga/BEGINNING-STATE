@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEGINNING STATE</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+<body>
+
+    <h1>Mood Matcher</h1>
+
+    <form class="form" role="form">
+
+        <div>
+            <label for="mood">Select your mood:</label>
+
+            <select id="mood" name="mood" required>
+            <option value="">--Choose--</option>
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="calm">Calm</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="feel">Why do you feel this way?</label>
+
+            <input type="text" name="feel" id="feel">
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    <!-- Result -->
+    <section class="result">
+
+        <h2 class="result-message"></h2>
+
+        <p class="result-note"></p>
+
+        <img class="result-image">
+
+    </section>
+
+
+    <script src="/js/form.js"></script>
+
+</body>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	background-color: #f9f9f9;
+	color: #222;
+	line-height: 1.6;
+	padding: 2em;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+form {
+	max-width: 500px;
+	margin: 2em auto;
+	background: #fff;
+	padding: 1.5em;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+	display: block;
+	margin-top: 1em;
+	font-weight: bold;
+}
+
+
+
+select, input,
+button {
+	display: block;
+	width: 100%;
+	padding: 0.6em;
+	font-size: 1em;
+	margin-top: 0.5em;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button {
+	background-color: #508D8A;
+	color: white;
+	font-weight: bold;
+	margin-top: 1.5em;
+	cursor: pointer;
+}
+
+button:hover,
+button:focus {
+	background-color: #023f3c;
+	outline: 2px solid #000;
+	outline-offset: 2px;
+}
+
+.suggestion {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 2em;
+	color: #152a60;
+}
+The message */
+.result-message {
+color: #333;
+}
+/* The mood image */
+.result-image {
+width: 150px;
+height: 150px;
+margin-top: 15px;
+}
+.result {
+text-align: center;
+}
