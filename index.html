@@ -1,61 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mood Matcher</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h1>Mood Matcher</h1>
 
-<body>
+    <!-- Mood form -->
+    <form id="mood-form">
+      <div>
+        <label for="mood">Select your mood:</label>
 
-    <body>
+        <select id="mood" name="mood" required>
+          <option value="">--Choose--</option>
+          <option value="Happy">Happy</option>
+          <option value="Sad">Sad</option>
+          <option value="Calm">Calm</option>
+        </select>
+      </div>
 
-        <h1>Mood Matcher</h1>
+      <div>
+        <label for="note">Why do you feel this way?</label>
 
-        <!-- Mood form -->
-        <form id="mood-form">
+        <input type="text" name="note" id="note" />
+      </div>
 
-            <div>
-                <label for="mood">Select your mood:</label>
+      <button type="submit">Submit</button>
 
-                <select id="mood" name="mood" required>
-                    <option value="">--Choose--</option>
-                    <option value="Happy">Happy</option>
-                    <option value="Sad">Sad</option>
-                    <option value="Calm">Calm</option>
-                </select>
-            </div>
+      <button type="button" id="reset">Reset</button>
+    </form>
 
-            <div>
-                <label for="note">Why do you feel this way?</label>
+    <!-- Results -->
+    <section id="results">
+      <h2 id="message"></h2>
 
-                <input type="text" name="note" id="note">
-            </div>
+      <p id="users-note"></p>
 
-            <button type="submit">Submit</button>
+      <img id="mood-image" src="" alt="" />
+    </section>
 
-            <button type="button" id="reset">Reset</button>
-
-        </form>
-
-
-        <!-- Results -->
-        <section id="results">
-
-            <h2 id="message"></h2>
-
-            <p id="users-note"></p>
-
-            <img id="mood-image" src="" alt="">
-
-        </section>
-
-
-        <script src="./js/form.js"></script>
-
-    </body>
-</body>
-
+    <script src="./js/form.js"></script>
+  </body>
 </html>
