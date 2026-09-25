@@ -1,77 +1,96 @@
+
 body {
-	font-family: Arial, sans-serif;
-	font-size: 18px;
-	background-color: #f9f9f9;
-	color: #222;
-	line-height: 1.6;
-	padding: 2em;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+    padding: 2em;
 }
 
+/* Page heading */
 h1 {
-	text-align: center;
-	color: #333;
+    text-align: center;
+    color: #333;
 }
 
-form {
-	max-width: 500px;
-	margin: 2em auto;
-	background: #fff;
-	padding: 1.5em;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Mood form */
+#mood-form {
+    max-width: 500px;
+    margin: 2em auto;
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Labels */
 label {
-	display: block;
-	margin-top: 1em;
-	font-weight: bold;
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
 }
 
-
-
-select, input,
+/* Select, input, and buttons */
+select,
+input,
 button {
-	display: block;
-	width: 100%;
-	padding: 0.6em;
-	font-size: 1em;
-	margin-top: 0.5em;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* Buttons */
 button {
-	background-color: #508D8A;
-	color: white;
-	font-weight: bold;
-	margin-top: 1.5em;
-	cursor: pointer;
+    background-color: #508D8A;
+    color: white;
+    font-weight: bold;
+    margin-top: 1.5em;
+    cursor: pointer;
 }
 
+/* Button hover */
 button:hover,
 button:focus {
-	background-color: #023f3c;
-	outline: 2px solid #000;
-	outline-offset: 2px;
+    background-color: #023f3c;
+    outline: 2px solid #000;
+    outline-offset: 2px;
 }
 
-.suggestion {
-	text-align: center;
-	font-size: 1.2em;
-	font-weight: bold;
-	margin-top: 2em;
-	color: #152a60;
+/* Results section */
+#results {
+    text-align: center;
+    margin-top: 2em;
 }
-The message */
-.result-message {
-color: #333;
+
+/* Message */
+#message {
+    color: #333;
 }
-/* The mood image */
-.result-image {
-width: 150px;
-height: 150px;
-margin-top: 15px;
+
+/* Mood image */
+#mood-image {
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
 }
-.result {
-text-align: center;
+
+/* Happy mood */
+.happy {
+    background-color: #e24476;
+}
+
+/* Sad mood */
+.sad {
+	
+    background-color: #599ee3;
+}
+
+/* Calm mood */
+.calm {
+    background-color: #095004;
 }

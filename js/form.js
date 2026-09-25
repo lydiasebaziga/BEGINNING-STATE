@@ -1,66 +1,113 @@
-// Get the form
-let form = document.querySelector(".form");
-
-// Get the result elements
-let resultMessage = document.querySelector(".result-message");
-let resultNote = document.querySelector(".result-note");
-let resultImage = document.querySelector(".result-image");
 
 
-// Function to check the mood
-function checkMood(mood) {
 
-    if (mood === "happy") {
+// These variables will hold the message and image info
+let output = "";
+let imgAlt = "";
+let imgSrc = "";
 
-        return {
-            message: "You are feeling happy! Keep smiling!",
-            image: "https://cdn-icons-png.flaticon.com/512/742/742751.png",
-            alt: "Happy face"
-        };
+// These variables connect to the elements in HTML where the results will show
+let message = document.querySelector("#message");
+let usersNote = document.querySelector("#users-note");
+let moodImage = document.querySelector("#mood-image");
+let results = document.querySelector("#results");
 
-    } else if (mood === "sad") {
+//connects to the form in the HTML
+const form = document.querySelector("#mood-form");
 
-        return {
-            message: "It's okay to feel sad. Take some time for yourself.",
-            image: "https://cdn-icons-png.flaticon.com/512/742/742752.png",
-            alt: "Sad face"
-        };
+//connects to the reset button in the HTML
+let reset = document.querySelector("#reset");
 
-    } else if (mood === "calm") {
+// runs when the form is submitted
+function onFormSubmit(event) {
+// prevents the page from refreshing when the form is submitted
+event.preventDefault();
 
-        return {
-            message: "You are feeling calm. Enjoy this peaceful moment!",
-            image: "https://cdn-icons-png.flaticon.com/512/5786/5786952.png",
-            alt: "Calm face"
-        };
-    }
+// removes any mood class that was added from the last submission
+results.classList.remove("happy");
+results.classList.remove("sad");
+results.classList.remove("calm");
+
+// Gets the information entered into the form
+const data = new FormData(event.target);
+
+// turns the form data into object
+const dataObject = Object.fromEntries(data.entries());
+
+// shows me the form data in the console
+//  console.log(dataObject);
+
+// Uses dot notation to get the mood and note from the object
+const mood = dataObject.mood;
+const note = dataObject.note;
+
+// Checks if the user selected Happy
+if (mood === "Happy") {
+// Sets the message and image info for Happy
+output = "Yay! Keep shining!😊";
+imgAlt = "Happy face emoji";
+imgSrc = "https://cdn-icons-png.flaticon.com/512/742/742751.png";
+
+// adds happy class to change the background color
+results.classList.add("happy");
+
+// Checks if the user selected Sad
+} else if (mood === "Sad") {
+//sets the message and image info for Sad
+output = "it's okay to feel sad. Sending hugs!💙";
+imgAlt = "Sad face emoji";
+imgSrc = "https://cdn-icons-png.flaticon.com/512/742/742752.png";
+
+// Adds the sad class to change background color
+results.classList.add("sad");
+
+// checks if the user selected Calm
+} else if (mood === "Calm") {
+// Sets message and image info for Calm
+output =
+"Breathe into the calmness.";
+imgAlt = "Calm face emoji";
+imgSrc = "https://cdn-icons-png.flaticon.com/512/5786/5786952.png";
+
+//adds the calm class to change the background color
+results.classList.add("calm");
 }
 
+//Updates heading with the mood message
+message.textContent = output;
 
-// Function to submit the form
-function submitForm(event) {
+// updates paragraph with the user's note
+usersNote.textContent = note;
 
-    event.preventDefault();
+// Adds image source to the image
+moodImage.src = imgSrc;
 
-    // Get the form data
-    let formData = new FormData(form);
-    let data = Object.fromEntries(formData);
+//adds alternative text to the image
+moodImage.alt = imgAlt;
 
-    // Get the mood and note
-    let mood = data.mood;
-    let note = data.feel;
-
-    // Check the mood
-    let result = checkMood(mood);
-
-    // Show the results
-    resultMessage.textContent = result.message;
-    resultNote.textContent = note;
-    resultImage.src = result.image;
-    resultImage.alt = result.alt;
+// resets form fields after submitting
+form.reset();
 }
 
+// Runs the onFormSubmit function when form is submitted
+form.addEventListener("submit", onFormSubmit);
 
-// Listen for the form submission
-form.addEventListener("submit", submitForm);
+// runs this function when reset button is clicked
+reset.addEventListener("click", function () {
+// removes all mood classes and their background color
+results.classList.remove("happy");
+results.classList.remove("sad");
+results.classList.remove("calm");
 
+// clears the message
+message.textContent = "";
+
+//clears the user's note
+usersNote.textContent = "";
+
+// Clears the image source
+moodImage.src = "";
+
+// Clears image alt text
+moodImage.alt = "";
+});

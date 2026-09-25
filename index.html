@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEGINNING STATE</title>
+    <title>Mood Matcher</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -14,38 +14,41 @@
 
         <h1>Mood Matcher</h1>
 
-        <form class="form" role="form">
+        <!-- Mood form -->
+        <form id="mood-form">
 
             <div>
                 <label for="mood">Select your mood:</label>
 
                 <select id="mood" name="mood" required>
                     <option value="">--Choose--</option>
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                    <option value="calm">Calm</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Calm">Calm</option>
                 </select>
             </div>
 
             <div>
-                <label for="feel">Why do you feel this way?</label>
+                <label for="note">Why do you feel this way?</label>
 
-                <input type="text" name="feel" id="feel">
+                <input type="text" name="note" id="note">
             </div>
 
             <button type="submit">Submit</button>
 
+            <button type="button" id="reset">Reset</button>
+
         </form>
 
 
-        <!-- Result -->
-        <section class="result">
+        <!-- Results -->
+        <section id="results">
 
-            <h2 class="result-message"></h2>
+            <h2 id="message"></h2>
 
-            <p class="result-note"></p>
+            <p id="users-note"></p>
 
-            <img class="result-image">
+            <img id="mood-image" src="" alt="">
 
         </section>
 
